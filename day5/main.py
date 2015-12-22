@@ -42,7 +42,7 @@ def contem_mais_que_dois_caracteres_repetidos(string):
 def contar_strings_boas(lista_strings):
     qtde_strings_boas = 0
 
-    for string_percorrida in strings:
+    for string_percorrida in lista_strings:
         if contem_pelo_menos_tres_vogais(string_percorrida) and contem_mais_que_dois_caracteres_repetidos(string_percorrida) and nao_contem_bad_string(string_percorrida):
             qtde_strings_boas += 1
 
