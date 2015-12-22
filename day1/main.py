@@ -10,7 +10,7 @@ def aonde_parou(movimentos):
             andar += 1
         else:
             andar -= 1
-    print "parei no andar: " + str(andar)
+    return "parei no andar: " + str(andar)
 
 
 def primeira_vez_no_porao(movimentos):
@@ -21,11 +21,10 @@ def primeira_vez_no_porao(movimentos):
         else:
             andar -= 1
         if andar == -1:
-            print "parei no -1 na posição: " + str(index + 1)
-            return
+            return "parei no -1 na posição: " + str(index + 1)
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
 movimentos_papai_noel = comum.ler(diretorio)
-aonde_parou(movimentos_papai_noel)
-primeira_vez_no_porao(movimentos_papai_noel)
+print aonde_parou(movimentos_papai_noel)
+print primeira_vez_no_porao(movimentos_papai_noel)
 

@@ -18,7 +18,7 @@ def papel_de_presente(dimensoes):
 
         area4 = min(l_w, w_h, h_l)
         area_total += area1 + area2 + area3 + area4
-    print "vamos precisar de: " + str(area_total) + " m² de papel de presente."
+    return "vamos precisar de: " + str(area_total) + "m² de papel de presente"
 
 
 def laco_de_fita(dimensoes):
@@ -37,9 +37,9 @@ def laco_de_fita(dimensoes):
 
         medida_total += medida1 + 2*medida2 + 2*medida3
 
-    print "vamos precisar de: " + str(medida_total) + " m de fita de presente."
+    return "vamos precisar de: " + str(medida_total) + "m de fita de presente"
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
 dimensoes_presentes = comum.ler_linhas(diretorio)
-papel_de_presente(dimensoes_presentes)
-laco_de_fita(dimensoes_presentes)
+print papel_de_presente(dimensoes_presentes)
+print laco_de_fita(dimensoes_presentes)

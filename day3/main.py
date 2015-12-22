@@ -25,12 +25,10 @@ def quantas_casas_receberam_ao_menos_um_presente(coordenadas):
             pos_y -= 1
             item = pos_x, pos_y
             coordenadas_passadas.append(item)
-    print "papai noel passou por " + str(len(coordenadas_passadas)) + " casas"
-    print "papai noel passou por " + str(len(set(coordenadas_passadas))) + " únicas casas"
+    return "papai noel passou por " + str(len(set(coordenadas_passadas))) + " únicas casas"
 
 
 def pairwise(iterable):
-    "s -> (s0,s1), (s2,s3), (s4, s5), ..."
     a = iter(iterable)
     return izip(a, a)
 
@@ -79,10 +77,9 @@ def quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coordenadas):
             item = pos_x_robo, pos_y_robo
             coordenadas_passadas.append(item)
 
-    print "papai noel e o robô passaram por " + str(len(coordenadas_passadas)) + " casas"
-    print "papai noel e o robô passaram por " + str(len(set(coordenadas_passadas))) + " únicas casas"
+    return "papai noel e o robô passaram por " + str(len(set(coordenadas_passadas))) + " únicas casas"
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
 coords = comum.ler(diretorio)
-quantas_casas_receberam_ao_menos_um_presente(coords)
-quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coords)
+print quantas_casas_receberam_ao_menos_um_presente(coords)
+print quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coords)

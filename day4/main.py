@@ -10,11 +10,11 @@ def calcular_zeros(string_entrada, qtde_zeros):
     hash_infinito = ''
     i = 0
     while hash_infinito != zeros_concatenados:
-        hash_infinito = (hashlib.md5((string_entrada + str(i))).hexdigest())[:qtde_zeros]
         i += 1
+        hash_infinito = (hashlib.md5((string_entrada + str(i))).hexdigest())[:qtde_zeros]
 
-    print "começa com " + str(qtde_zeros) + " zeros na posicao: " + str(i - 1)
+    return "pra começar com " + str(qtde_zeros) + " zeros na precisa de " + str(i) + " iterações"
 
 entrada = "ckczppom"
-calcular_zeros(entrada, 5)
-calcular_zeros(entrada, 6)
+print calcular_zeros(entrada, 5)
+print calcular_zeros(entrada, 6)
