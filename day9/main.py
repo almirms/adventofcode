@@ -21,7 +21,7 @@ def calcular_menor_rota(viagens):
             # rota não existente
             continue
 
-    print "a menor rota é " + str(rota_minima) + " medindo " + str(tamanho_min)
+    return "a menor rota é " + str(rota_minima) + " medindo " + str(tamanho_min)
 
 
 def calcular_maior_rota(viagens):
@@ -41,7 +41,7 @@ def calcular_maior_rota(viagens):
             # rota não existente
             continue
 
-    print "a maior rota é " + str(rota_maxima) + " medindo " + str(tamanho_maximo)
+    return "a maior rota é " + str(rota_maxima) + " medindo " + str(tamanho_maximo)
 
 
 def calcular_tamanho_rota(rota, viagens_possiveis):
@@ -69,5 +69,5 @@ def calcular_viagens_possiveis_e_rotas(viagens):
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
 viagens_lista = comum.ler_linhas(diretorio)
-calcular_menor_rota(viagens_lista)
-calcular_maior_rota(viagens_lista)
+print calcular_menor_rota(viagens_lista)
+print calcular_maior_rota(viagens_lista)
