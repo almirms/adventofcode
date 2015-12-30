@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import os
 
-import comum
+import arquivo_de_entrada
 
 
 def contem_pelo_menos_tres_vogais(string):
@@ -100,6 +100,6 @@ def contar_strings_boas_nova_regra(lista_strings):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-strings = comum.ler_linhas(diretorio)
+strings = arquivo_de_entrada.ler_linhas(diretorio)
 print contar_strings_boas(strings)
 # print contar_strings_boas_nova_regra(strings)

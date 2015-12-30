@@ -3,9 +3,8 @@ import hashlib
 
 
 def calcular_zeros(string_entrada, qtde_zeros):
-    zeros_concatenados = ''
-    for num in xrange(qtde_zeros):
-        zeros_concatenados += '0'
+
+    zeros_concatenados = '0' * qtde_zeros
 
     hash_infinito = ''
     i = 0

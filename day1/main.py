@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import os
-import comum
+import arquivo_de_entrada
 
 
 def aonde_parou(movimentos):
@@ -24,7 +24,7 @@ def primeira_vez_no_porao(movimentos):
             return "parei no -1 na posição: " + str(index + 1)
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-movimentos_papai_noel = comum.ler(diretorio)
+movimentos_papai_noel = arquivo_de_entrada.ler(diretorio)
 print aonde_parou(movimentos_papai_noel)
 print primeira_vez_no_porao(movimentos_papai_noel)
 

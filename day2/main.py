@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import os
-import comum
+import arquivo_de_entrada
 
 
 def papel_de_presente(dimensoes):
@@ -40,6 +40,6 @@ def laco_de_fita(dimensoes):
     return "vamos precisar de: " + str(medida_total) + "m de fita de presente"
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-dimensoes_presentes = comum.ler_linhas(diretorio)
+dimensoes_presentes = arquivo_de_entrada.ler_linhas(diretorio)
 print papel_de_presente(dimensoes_presentes)
 print laco_de_fita(dimensoes_presentes)

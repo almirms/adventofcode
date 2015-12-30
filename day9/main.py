@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import os
-import comum
+import arquivo_de_entrada
 import itertools
 
 
@@ -68,6 +68,6 @@ def calcular_viagens_possiveis_e_rotas(viagens):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-viagens_lista = comum.ler_linhas(diretorio)
+viagens_lista = arquivo_de_entrada.ler_linhas(diretorio)
 print calcular_menor_rota(viagens_lista)
 print calcular_maior_rota(viagens_lista)
