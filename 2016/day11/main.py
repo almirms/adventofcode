@@ -10,7 +10,7 @@ def incrementar_senha(senha):
 
     while senha_incrementada != ultima_senha:
         senha_incrementada = adicionar_um(senha_incrementada)
-        print senha_incrementada
+        print(senha_incrementada)
     return senha_incrementada
 
 
@@ -24,7 +24,6 @@ def achar_ultimo_char_diferente_de_a(senha):
 
 
 def adicionar_um(senha):
-
     ultima_posicao_diferente_de_a, char_ultima_posicao_diferente_de_a = achar_ultimo_char_diferente_de_a(senha)
     if char_ultima_posicao_diferente_de_a == 'z':
         senha = senha[:ultima_posicao_diferente_de_a] + 'a' + senha[ultima_posicao_diferente_de_a + 1:]

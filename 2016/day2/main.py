@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import os
-import arquivo_de_entrada
+import input_file
 
 
 def papel_de_presente(dimensoes):
@@ -35,11 +35,12 @@ def laco_de_fita(dimensoes):
         lista.remove(medida2)
         medida3 = min(lista)
 
-        medida_total += medida1 + 2*medida2 + 2*medida3
+        medida_total += medida1 + 2 * medida2 + 2 * medida3
 
     return "vamos precisar de: " + str(medida_total) + "m de fita de presente"
 
+
 diretorio = os.path.dirname(os.path.abspath(__file__))
-dimensoes_presentes = arquivo_de_entrada.ler_linhas(diretorio)
-print papel_de_presente(dimensoes_presentes)
-print laco_de_fita(dimensoes_presentes)
+dimensoes_presentes = input_file.ler_linhas(diretorio)
+print(papel_de_presente(dimensoes_presentes))
+print(laco_de_fita(dimensoes_presentes))

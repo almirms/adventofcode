@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import os
-import arquivo_de_entrada
-from itertools import izip
+
+import input_file
 
 
 def quantas_casas_receberam_ao_menos_um_presente(coordenadas):
@@ -30,7 +30,7 @@ def quantas_casas_receberam_ao_menos_um_presente(coordenadas):
 
 def pairwise(iterable):
     a = iter(iterable)
-    return izip(a, a)
+    return zip(a, a)
 
 
 def quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coordenadas):
@@ -79,7 +79,8 @@ def quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coordenadas):
 
     return "papai noel e o robô passaram por " + str(len(set(coordenadas_passadas))) + " únicas casas"
 
+
 diretorio = os.path.dirname(os.path.abspath(__file__))
-coords = arquivo_de_entrada.ler(diretorio)
-print quantas_casas_receberam_ao_menos_um_presente(coords)
-print quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coords)
+coords = input_file.ler(diretorio)
+print(quantas_casas_receberam_ao_menos_um_presente(coords))
+print(quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coords))

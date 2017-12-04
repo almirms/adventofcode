@@ -1,6 +1,6 @@
 # -*- coding: UTF-8 -*-
 import os
-import arquivo_de_entrada
+import input_file
 
 
 def aonde_parou(movimentos):
@@ -23,8 +23,8 @@ def primeira_vez_no_porao(movimentos):
         if andar == -1:
             return "parei no -1 na posição: " + str(index + 1)
 
-diretorio = os.path.dirname(os.path.abspath(__file__))
-movimentos_papai_noel = arquivo_de_entrada.ler(diretorio)
-print aonde_parou(movimentos_papai_noel)
-print primeira_vez_no_porao(movimentos_papai_noel)
 
+diretorio = os.path.dirname(os.path.abspath(__file__))
+movimentos_papai_noel = input_file.ler(diretorio)
+print(aonde_parou(movimentos_papai_noel))
+print(primeira_vez_no_porao(movimentos_papai_noel))

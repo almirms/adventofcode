@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 import os
 
-import arquivo_de_entrada
+import input_file
 
 
 def contem_pelo_menos_tres_vogais(string):
@@ -72,14 +72,11 @@ def encontrar_indices_pares(string_percorrida):
 
 
 def encontrar_indices_letra_repetida_com_uma_no_meio(string_percorrida):
-
-
     return 0, 0
 
 
 def regra_louca(string_percorrida):
     indices_pares = encontrar_indices_pares(string_percorrida)
-    print indices_pares
     indices_letra_repetida_com_uma_no_meio = encontrar_indices_letra_repetida_com_uma_no_meio(string_percorrida)
 
     if indices_letra_repetida_com_uma_no_meio[0] >= indices_pares[0] and indices_letra_repetida_com_uma_no_meio[1] <= \
@@ -92,14 +89,11 @@ def contar_strings_boas_nova_regra(lista_strings):
     qtde_strings_boas = 0
     for string_percorrida in lista_strings:
         if regra_louca(string_percorrida):
-            print "boa: " + string_percorrida
             qtde_strings_boas += 1
-        else:
-            print "ruim: " + string_percorrida
     return "a quantidade de strings boas na nova regra é: " + str(qtde_strings_boas)
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-strings = arquivo_de_entrada.ler_linhas(diretorio)
-print contar_strings_boas(strings)
-# print contar_strings_boas_nova_regra(strings)
+strings = input_file.ler_linhas(diretorio)
+print(contar_strings_boas(strings))
+print(contar_strings_boas_nova_regra(strings))
