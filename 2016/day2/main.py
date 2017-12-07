@@ -41,6 +41,6 @@ def laco_de_fita(dimensoes):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-dimensoes_presentes = input_file.ler_linhas(diretorio)
+dimensoes_presentes = input_file.read_lines(diretorio)
 print(papel_de_presente(dimensoes_presentes))
 print(laco_de_fita(dimensoes_presentes))

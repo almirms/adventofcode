@@ -25,6 +25,6 @@ def primeira_vez_no_porao(movimentos):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-movimentos_papai_noel = input_file.ler(diretorio)
+movimentos_papai_noel = input_file.read(diretorio)
 print(aonde_parou(movimentos_papai_noel))
 print(primeira_vez_no_porao(movimentos_papai_noel))

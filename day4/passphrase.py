@@ -26,7 +26,7 @@ def is_valid_part2(passphrase):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-input_string = input_file.ler_linhas(diretorio)
+input_string = input_file.read_lines(diretorio)
 
 result = 0
 

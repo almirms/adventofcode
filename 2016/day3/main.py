@@ -81,6 +81,6 @@ def quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coordenadas):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-coords = input_file.ler(diretorio)
+coords = input_file.read(diretorio)
 print(quantas_casas_receberam_ao_menos_um_presente(coords))
 print(quantas_casas_receberam_ao_menos_um_presente_com_ajuda_do_robo(coords))

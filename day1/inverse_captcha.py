@@ -18,7 +18,7 @@ def get_next_element_part2( input_string, idx ):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-input_string = input_file.ler_linhas(diretorio)[0]
+input_string = input_file.read_lines(diretorio)[0]
 
 result_part1 = 0
 

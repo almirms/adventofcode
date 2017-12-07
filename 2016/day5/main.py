@@ -94,6 +94,6 @@ def contar_strings_boas_nova_regra(lista_strings):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-strings = input_file.ler_linhas(diretorio)
+strings = input_file.read_lines(diretorio)
 print(contar_strings_boas(strings))
 print(contar_strings_boas_nova_regra(strings))

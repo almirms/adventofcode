@@ -68,6 +68,6 @@ def calcular_viagens_possiveis_e_rotas(viagens):
 
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-viagens_lista = input_file.ler_linhas(diretorio)
+viagens_lista = input_file.read_lines(diretorio)
 print(calcular_menor_rota(viagens_lista))
 print(calcular_maior_rota(viagens_lista))

@@ -4,7 +4,7 @@ from itertools import combinations_with_replacement, permutations
 import input_file
 
 diretorio = os.path.dirname(os.path.abspath(__file__))
-input_string = input_file.ler_linhas(diretorio)
+input_string = input_file.read_lines(diretorio)
 
 
 def find_divisibles(input_list):
